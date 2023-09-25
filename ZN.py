@@ -12,7 +12,7 @@ from streamlit import components
 #file_url = 'https://github.com/AhmadBakkar/Malaria/blob/master/Malaria.csv'
 #df = pd.read_csv(file_url)
 
-df = pd.read_csv('C:\\Users\\Ahmad\\Desktop\\World University Rankings 2023(1).csv')
+df = pd.read_csv('World University Rankings 2023(1).csv')
 
 st.set_page_config(page_title = 'University Ranking',
                     page_icon = 'bar_chart:',
