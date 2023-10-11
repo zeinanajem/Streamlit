@@ -25,8 +25,9 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 # Create a dictionary to store the session state
 session_state = st.session_state
 
-# Add a slider widget for the user to select the minimum number of universities
 
+# Create a selectbox widget to allow the user to choose a specific country
+selected_country = st.selectbox("Select a Country:", df['Location'].unique())
 
 
 # Set the page title
