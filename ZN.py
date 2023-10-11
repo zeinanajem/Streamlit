@@ -59,7 +59,7 @@ fig.update_layout(xaxis_title='Country', yaxis_title='Number of Universities')
 st.plotly_chart(fig)
 ####################################################################3
 
-
+st.text("This chart displays the number of universities in each country. Use the slider above to filter the results with United state having 34 universitie")
 
 # Convert 'No of student' column to a numeric data type (assuming it contains numbers)
 st.title("Top 10 Universities with Highest Number of Students")
