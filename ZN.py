@@ -42,17 +42,10 @@ df2 = df.head(100)
 country_counts = df2['Location'].value_counts().reset_index()
 country_counts.columns = ['Country', 'Count']
 
-#########
-# Add a slider to select the minimum number of universities to display
-min_universities = st.slider("Minimum Number of Universities", min_value=0, max_value=df2['Count'].max(), value=0)
-
-# Filter the data based on the selected minimum number of universities
-filtered_data1 = country_counts[country_counts['Count'] >= min_universities]
-
 
 # Create a bar chart to display the count of top 100 universities in each country
 st.title("Count of Top 100 Universities by Country")
-fig = px.bar(filtered_data1, x='Country', y='Count', color='Count', labels={'Count': 'Number of Universities'})
+fig = px.bar(df2, x='Country', y='Count', color='Count', labels={'Count': 'Number of Universities'})
 
 # Customize the bar chart appearance
 fig.update_layout(xaxis_title='Country', yaxis_title='Number of Universities')
