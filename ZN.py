@@ -28,8 +28,6 @@ session_state = st.session_state
 # Add a slider widget for the user to select the minimum number of universities
 min_universities = st.slider("Minimum Number of Universities:", min_value=1, max_value=100, value=1)
 
-# Filter the data based on the selected minimum number of universities
-filtered_country_counts = country_counts[country_counts['Count'] >= min_universities]
 
 # Set the page title
 st.title('University Ranking Dataset Dashboard')
