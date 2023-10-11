@@ -62,7 +62,7 @@ df1 = filtered_df.sort_values(by='OverAll Score', ascending=False).head(10)
 st.dataframe(df1)
 
 # Create a bar chart using Streamlit's native charting capabilities
-st.bar_chart(df1.set_index('Name of University')['No of student'])
+st.bar_chart(df1.set_index('Name of University')['OverAll Score'])
 
 ####################################################################3
 
