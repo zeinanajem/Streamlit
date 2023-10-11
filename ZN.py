@@ -64,7 +64,7 @@ filtered_df['No of student'] = pd.to_numeric(filtered_df['No of student'].str.re
 filtered_df = filtered_df[pd.to_numeric(filtered_df['No of student'], errors='coerce').notna()]
 
 # Sort the DataFrame by 'No of student' column in descending order to get the top 10
-df1 = filtered_df.sort_values(by='OverAll Score', ascending=False).head(10)
+df1 = filtered_df.sort_values(by='No of student', ascending=False).head(10)
 
 st.dataframe(df1)
 
