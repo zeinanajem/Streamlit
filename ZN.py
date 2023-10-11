@@ -26,12 +26,6 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 session_state = st.session_state
 
 
-# Create a selectbox widget to allow the user to choose a specific country
-selected_country = st.sidebar.selectbox("Select a Country:", df['Location'].unique())
-
-# Filter the data based on the selected country and the selected range of students
-filtered_df = df[df['Location'] == selected_country]
-
 # Set the page title
 st.title('University Ranking Dataset Dashboard')
 
