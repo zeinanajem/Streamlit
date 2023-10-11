@@ -26,7 +26,7 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 session_state = st.session_state
 
 # Add a slider widget for the user to select the minimum number of universities
-min_universities = st.slider("Minimum Number of Universities:", min_value=1, max_value=100, value=1)
+
 
 
 # Set the page title
