@@ -59,6 +59,7 @@ filtered_df['No of student'] = pd.to_numeric(filtered_df['No of student'], error
 
 # Sort the DataFrame by 'No of student' column in descending order to get the top 10
 df1 = filtered_df.sort_values(by='No of student', ascending=False).head(10)
+st.dataframe(df1)
 
 # Create a bar chart using Streamlit's native charting capabilities
 st.bar_chart(df1.set_index('Name of University')['No of student'])
