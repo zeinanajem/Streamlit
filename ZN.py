@@ -56,10 +56,10 @@ st.plotly_chart(fig)
 
 # Convert 'No of student' column to a numeric data type (assuming it contains numbers)
 st.title("Top 10 Universities with Highest Number of Students")
-df['No of student'] = pd.to_numeric(df['No of student'], errors='coerce')  # 'coerce' converts non-numeric values to NaN
+filtered_df['No of student'] = pd.to_numeric(df['No of student'], errors='coerce')  # 'coerce' converts non-numeric values to NaN
 
 # Sort the DataFrame by 'No of student' column in descending order to get the top 10
-df1 = df.sort_values(by='No of student', ascending=False).head(10)
+df1 = filtered_df.sort_values(by='No of student', ascending=False).head(10)
 
 # Create a bar chart using Streamlit's native charting capabilities
 st.bar_chart(df1.set_index('Name of University')['No of student'])
