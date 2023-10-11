@@ -26,8 +26,17 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 session_state = st.session_state
 
 
-selected_country = st.sidebar.selectbox("Select a Country:", df['Location'].str.strip().str.lower().unique())
-filtered_df = df[df['Location'].str.strip().str.lower() == selected_country]
+# Create a sidebar with filters for the minimum and maximum number of students
+st.sidebar.title("Student Filters")
+
+min_students = st.sidebar.slider("Minimum Number of Students", int(df['No of student'].min()), int(df['No of student'].max()), int(df['No of student'].min()))
+max_students = st.sidebar.slider("Maximum Number of Students", int(df['No of student'].min()), int(df['No of student'].max()), int(df['No of student'].max()))
+
+# Create a selectbox widget to allow the user to choose a specific country
+selected_country = st.sidebar.selectbox("Select a Country:", df['Location'].unique())
+
+# Filter the data based on the selected country and the selected range of students
+filtered_df = df[(df['Location'] == selected_country) & (df['No of student'] >= min_students) & (df['No of student'] <= max_students)]
 
 
 # Set the page title
