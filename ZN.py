@@ -29,8 +29,8 @@ session_state = st.session_state
 # Create a sidebar with filters for the minimum and maximum number of students
 st.sidebar.title("Student Filters")
 
-min_students = st.sidebar.slider("Minimum Number of Students", int(df['No of student'].min()), int(df['No of student'].max()), int(df['No of student'].min()))
-max_students = st.sidebar.slider("Maximum Number of Students", int(df['No of student'].min()), int(df['No of student'].max()), int(df['No of student'].max()))
+min_students = st.sidebar.slider("Minimum Number of Students", df['No of student'].min(), df['No of student'].max(), df['No of student'].min())
+max_students = st.sidebar.slider("Maximum Number of Students", df['No of student'].min(), df['No of student'].max(), df['No of student'].max())
 
 # Create a selectbox widget to allow the user to choose a specific country
 selected_country = st.sidebar.selectbox("Select a Country:", df['Location'].unique())
