@@ -31,6 +31,8 @@ selected_country = st.sidebar.selectbox("Select a Country:", df['Location'].uniq
 # Filter the data based on the selected country
 filtered_df = df[df['Location'] == selected_country]
 
+st.dataframe(filtered_df)
+
 # Set the page title
 st.title('University Ranking Dataset Dashboard')
 
@@ -60,10 +62,6 @@ df1 = filtered_df.sort_values(by='No of student', ascending=False).head(10)
 
 # Create a bar chart using Streamlit's native charting capabilities
 st.bar_chart(df1.set_index('Name of University')['No of student'])
-
-
-
-
 
 ####################################################################3
 
