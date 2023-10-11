@@ -25,10 +25,10 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 # Create a dictionary to store the session state
 session_state = st.session_state
 
-# Create a selectbox widget to allow the user to choose a specific country
+
 selected_country = st.sidebar.selectbox("Select a Country:", df['Location'].unique())
 
-# Filter the data based on the selected country and the selected range of students
+# Filter the data based on the selected country
 filtered_df = df[df['Location'] == selected_country]
 
 # Set the page title
